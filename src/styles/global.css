@@ -1,0 +1,129 @@
+/* 🌟 Reset Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+
+/* 🌈 Full-page background with soft gradient */
+body {
+  background: linear-gradient(135deg, #ffd6e0, #ffdfba, #add8e6);
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  transition: background 0.3s ease-in-out;
+}
+
+/* 🎈 Bubble animation container */
+.bubble-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* 🎈 Floating Bubbles */
+.bubble {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  animation: floatBubble linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes floatBubble {
+  from {
+    transform: translateY(100vh);
+  }
+  to {
+    transform: translateY(-10vh);
+  }
+}
+
+/* 🏆 Responsive Form Container */
+.login-container {
+  background: linear-gradient(135deg, #add8e6, #ffdfba, #ffd6e0); /* Matching background */
+  padding: 2rem;
+  border-radius: 12px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  width: 350px;
+  max-width: 90%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease-in-out;
+  position: relative;
+}
+
+/* 🔥 Remove duplicate overlapping box */
+.login-container::before {
+  display: none;
+}
+
+.login-container h2 {
+  margin-bottom: 1rem;
+  font-size: 22px;
+}
+
+.login-container:hover {
+  transform: scale(1.02);
+}
+
+/* 📝 Inputs */
+input {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  font-size: 16px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  color: #333;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.4);
+  border-color: #ff80ab;
+}
+
+/* 🎨 Buttons */
+button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, #ff80ab);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+button:hover {
+  background: linear-gradient(to right, #ff5277, #ffd6e0);
+  transform: translateY(-2px);
+}
+
+/* 🌟 Responsive Scaling */
+@media (max-width: 600px) {
+  .login-container {
+    width: 90%;
+  }
+  input,
+  button {
+    font-size: 14px;
+  }
+}

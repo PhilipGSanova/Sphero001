@@ -1,0 +1,93 @@
+html, body {
+  height: 100vh; /* Add this to ensure body has full viewport height */
+  margin: 0; /* reset default margin */
+}
+
+/* 📌 Home Page */
+.home-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ffdfba, #add8e6);
+}
+
+/* 🎈 Floating Media Bubbles */
+.media-bubble {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.media-bubble img,
+.media-bubble video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.media-bubble:hover {
+  transform: scale(1.1);
+}
+
+/* 🔎 Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+}
+
+/* 🔥 Expanded Media */
+.media-expanded {
+  position: fixed;
+  right: 35%;
+  bottom: 25%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  max-width: 500px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  text-align: center;
+  z-index: 1000;
+}
+
+.media-expanded img,
+.media-expanded video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.media-info {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.media-caption {
+  font-size: 18px;
+  font-weight: bold;
+  color: #444;
+  margin-top: 10px;
+}
+
+/* Animation */
+.media-bubble:hover {
+  transform: scale(1.1);
+}
